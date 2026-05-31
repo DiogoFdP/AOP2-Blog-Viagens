@@ -1,19 +1,19 @@
 // =================================================================
-// TÓPICO 07 e 08: Objetos nativos (Date) e Manipulação de DOM
+// Parte 1: Objetos nativos (Date) e Manipulação de DOM (Tópicos 7 e 8)
 // =================================================================
 
-// Função para exibir saudação com base na hora do usuário
 function exibirSaudacao() {
-    // Pega o elemento onde a saudação vai aparecer
+    // Procuro no HTML se tem algum elemento com o id "saudacao" pra eu alterar
     let elementoSaudacao = document.getElementById("saudacao");
     
-    // Objeto nativo do JS para pegar a data/hora atual
+    // Aqui apliquei a matéria de Objetos Nativos. Peguei a data/hora do PC do usuário.
     let dataAtual = new Date();
+    // Extrai só a hora do objeto
     let hora = dataAtual.getHours();
     
     let mensagem = "";
 
-    // Lógica condicional (Comportamento)
+    // Lógica simples pra decidir qual texto exibir com base na hora
     if (hora >= 5 && hora < 12) {
         mensagem = "Bom dia, viajante! ☀️";
     } else if (hora >= 12 && hora < 18) {
@@ -22,38 +22,40 @@ function exibirSaudacao() {
         mensagem = "Boa noite, viajante! 🌙";
     }
 
-    // Manipulando o DOM para injetar o texto
+    // Se a tag existir na página (manipulando o DOM), escreve a mensagem nela
     if (elementoSaudacao) {
         elementoSaudacao.innerText = mensagem;
     }
 }
 
-// Executa a saudação assim que a página carrega
+// Chamo a função direto pra rodar assim que a página abrir
 exibirSaudacao();
 
 
 // =================================================================
-// TÓPICO 05 e 06: Validação de Formulários e Comportamento
+// Parte 2: Validação de Formulários e Eventos (Tópicos 5 e 6)
 // =================================================================
 
-// Seleciona o formulário pelo ID (que vamos colocar lá no HTML)
+// Pegando o meu formulário lá do HTML
 let formContato = document.getElementById("form-contato");
 
-// Verifica se o formulário existe na página atual antes de adicionar o evento
+// Coloquei esse IF porque o form só existe na página de contato. 
+// Sem isso, dava erro no console nas outras páginas.
 if (formContato) {
-    // Adiciona um "ouvinte" para o evento de 'submit' (clicar em enviar)
+    
+    // Fico "ouvindo" quando o usuário clicar em enviar (submit)
     formContato.addEventListener("submit", function(evento) {
         
-        // Impede a página de recarregar (comportamento padrão do form)
+        // Uso o preventDefault pra página não tentar recarregar sozinha e apagar os dados
         evento.preventDefault();
         
-        // Pega o valor que o usuário digitou no campo nome
+        // Pegando o que o usuário digitou na caixinha de "nome"
         let nomeUsuario = document.getElementById("nome").value;
         
-        // Simples validação/feedback usando alert nativo
+        // Mostro um alert confirmando o envio. Simples, mas funciona.
         alert("Que legal, " + nomeUsuario + "! Sua mensagem foi recebida com sucesso. Em breve entraremos em contato com mais dicas de viagem!");
         
-        // Limpa o formulário após enviar (Manipulação de DOM)
+        // Uso o reset() do DOM pra limpar os campos pra pessoa poder enviar de novo se quiser
         formContato.reset();
     });
 }
