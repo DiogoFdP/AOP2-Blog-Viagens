@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Viagens | Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho do Site -->
+    <header>
+        <h1>Mochileiros Universitários</h1>
+        <span id="saudacao"></span>
+        
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="franca.html">França</a></li>
+                <li><a href="japao.html">Japão</a></li>
+                <li><a href="peru.html">Peru</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal (Formulário) -->
+    <main>
+        <h2>Fale Conosco</h2>
+        <p>Tem alguma dúvida ou quer compartilhar seu roteiro com a gente? Preencha o formulário abaixo!</p>
+
+        <!-- Formulário Simples de Contato -->
+        <form id="form-contato" action="#" method="POST">
+            <div>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+            <br>
+            <!-- Botão de Enviar -->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <!-- Rodapé do Site -->
+    <footer>
+        <p>&copy; 2023 Trabalho de Desenvolvimento Web - Grupo de Viagens</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
