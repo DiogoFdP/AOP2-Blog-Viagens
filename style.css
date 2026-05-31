@@ -98,7 +98,7 @@ nav a:hover {
 ========================================= */
 .hero {
     /* Botei um fundo escuro transparente por cima da foto pro texto aparecer bem */
-    background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('img/hero-bg.jpg');
+    background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('img/hero-bg.png');
     background-size: cover;
     background-position: center;
     height: 400px;
