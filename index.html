@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações básicas de caracteres e tela pro site não quebrar no celular -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Blog de Viagens | Home</title>
+    
+    <!-- Puxando o meu arquivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Usando a tag semântica header pro topo do site, como pedido -->
     <header>
         <h1>Mochileiros Universitários</h1>
+        
+        <!-- Deixei esse span vazio pro meu JavaScript injetar a saudação aqui depois -->
         <span id="saudacao"></span>
+        
+        <!-- Menu principal com a tag nav. Ele repete em todas as páginas. -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,47 +30,58 @@
         </nav>
     </header>
 
-    <!-- NOVO: Hero Banner -->
+    <!-- Banner grande de entrada pra chamar atenção -->
     <div class="hero">
         <h2>Explore o Mundo Conosco</h2>
+        <!-- Texto explicativo sobre o blog, cumprindo o requisito da home -->
         <p>Um blog criado por estudantes para compartilhar cultura, roteiros e experiências incríveis pelo planeta. Descubra seu próximo destino!</p>
     </div>
 
+    <!-- Conteúdo principal do site vai na tag main -->
     <main>
         <h2 class="titulo-secao">Destinos em Destaque</h2>
         <p>Preparamos artigos completos sobre os locais mais fascinantes do mundo. Clique em uma das imagens abaixo para embarcar nessa jornada cultural e histórica pelos nossos destaques da semana.</p>
 
+        <!-- Agrupei os destaques em uma section -->
         <section class="destinos-destaque">
+            
+            <!-- Card 1 -->
             <div class="card">
                 <h3>França</h3>
                 <p>História, arte e a culinária mais refinada da Europa.</p>
+                <!-- O requisito pedia a imagem funcionando como link, então botei a tag img dentro da tag a -->
                 <a href="franca.html">
-                    <img src="img/franca.png" alt="Foto da Torre Eiffel na França">
+                    <img src="img/franca.jpg" alt="Foto da Torre Eiffel na França">
                 </a>
             </div>
 
+            <!-- Card 2 -->
             <div class="card">
                 <h3>Japão</h3>
                 <p>A harmonia perfeita entre tecnologia e tradição milenar.</p>
                 <a href="japao.html">
-                    <img src="img/japao.png" alt="Foto do Japão">
+                    <img src="img/japao.jpg" alt="Foto do Japão">
                 </a>
             </div>
 
+            <!-- Card 3 -->
             <div class="card">
                 <h3>Peru</h3>
                 <p>Mistérios do Império Inca e rica gastronomia andina.</p>
                 <a href="peru.html">
-                    <img src="img/peru.png" alt="Foto de Machu Picchu no Peru">
+                    <img src="img/peru.jpg" alt="Foto de Machu Picchu no Peru">
                 </a>
             </div>
+            
         </section>
     </main>
 
+    <!-- Tag semântica footer pro rodapé -->
     <footer>
         <p>&copy; 2023 Mochileiros Universitários - Trabalho Acadêmico</p>
     </footer>
 
+    <!-- Chamo o JS no finalzinho pro site carregar mais rápido -->
     <script src="script.js"></script>
 </body>
 </html>
