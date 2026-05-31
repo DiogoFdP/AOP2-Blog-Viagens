@@ -8,12 +8,9 @@
 </head>
 <body>
 
-    <!-- Cabeçalho do Site -->
     <header>
         <h1>Mochileiros Universitários</h1>
         <span id="saudacao"></span>
-        
-        <!-- Menu de Navegação -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -25,37 +22,42 @@
         </nav>
     </header>
 
-    <!-- Conteúdo Principal (Formulário) -->
     <main>
-        <h2>Fale Conosco</h2>
+        <h2 class="titulo-secao">Fale Conosco</h2>
         <p>Tem alguma dúvida ou quer compartilhar seu roteiro com a gente? Preencha o formulário abaixo!</p>
 
-        <!-- Formulário Simples de Contato -->
+        <!-- Formulário de contato. Botei o ID aqui pro meu arquivo JS conseguir achar ele depois e validar -->
         <form id="form-contato" action="#" method="POST">
+            
+            <!-- Campo pro usuário colocar o nome -->
             <div>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required>
+                <!-- O 'for' liga o label ao input pra ficar acessível -->
+                <label for="nome">Seu Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
             </div>
-            <br>
+            
+            <!-- Campo de E-mail (já vem com a validação do @ do HTML5) -->
             <div>
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Seu E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
             </div>
-            <br>
+            
+            <!-- Área de texto pra mensagem -->
             <div>
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                <label for="mensagem">Sua Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
             </div>
-            <br>
-            <!-- Botão de Enviar -->
-            <button type="submit">Enviar</button>
+            
+            <!-- Botão de enviar que vai disparar meu script JS -->
+            <button type="submit">Enviar Mensagem</button>
+
         </form>
     </main>
 
-    <!-- Rodapé do Site -->
     <footer>
-        <p>&copy; 2023 Trabalho de Desenvolvimento Web - Grupo de Viagens</p>
+        <p>&copy; 2023 Mochileiros Universitários</p>
     </footer>
-<script src="script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
